@@ -39,10 +39,6 @@ def get_processamento_uvas_de_mesa():
     dados = s.processamento_uvas_de_mesa()
     return {"Processamento uvas de mesa": dados}
 
-@app.get('/importacao/vinhos_de_mesa', tags=["Importação"])
-def get_importacao_vinhos_de_mesa():
-    s = Embrapa()
-    dados = s.importacao_espumantes()
-    return {"importacao de vinhos de mesa": dados}
+
 
 
