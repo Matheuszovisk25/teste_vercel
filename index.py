@@ -39,6 +39,60 @@ def get_processamento_uvas_de_mesa():
     dados = s.processamento_uvas_de_mesa()
     return {"Processamento uvas de mesa": dados}
 
+@app.get('/importacao/vinhos_de_mesa', tags=["Importação"])
+def importacao_vinhos_de_mesa():
+    s = Embrapa()
+    dados = s.importacao_vinhos_de_mesa()
+    return {"Importacao vinhos de mesa": dados}
+
+@app.get('/importacao/espumantes', tags=["Importação"])
+def importacao_espumantes():
+    s = Embrapa()
+    dados = s.importacao_espumantes()
+    return {"Importacao vinhos de mesa": dados}
+
+@app.get('/importacao/uvas_frescas', tags=["Importação"])
+def importacao_uvas_frescas():
+    s = Embrapa()
+    dados = s.importacao_uvas_frescas()
+    return {"Importacao uvas frescas": dados}
+
+@app.get('/importacao/uvas_passas', tags=["Importação"])
+def importacao_uvas_passas():
+    s = Embrapa()
+    dados = s.importacao_uvas_passas()
+    return {"Importacao uvas_passas": dados}
+
+@app.get('/importacao/suco_de_uvas', tags=["Importação"])
+def importacao_suco_de_uva():
+    s = Embrapa()
+    dados = s.importacao_suco_de_uva()
+    return {"Importacao suco de uva": dados}
+
+@app.get('/exportacao/vinho_de_mesa', tags=["Exportação"])
+def exportacao_vinho_de_mesa():
+    s = Embrapa()
+    dados = s.exportacao_suco_de_uva()
+    return {"Exportacao suco de uva": dados}
+
+@app.get('/exportacao/espumantes', tags=["Exportação"])
+def exportacao_espumantes():
+    s = Embrapa()
+    dados = s.exportacao_espumantes()
+    return {"Exportação espumantes:": dados}
+
+@app.get('/exportacao/uvas_frescas', tags=["Exportação"])
+def exportacao_uvas_frescas():
+    s = Embrapa()
+    dados = s.exportacao_uvas_frescas()
+    return {"Exportação uvas frescas": dados}
+
+@app.get('/exportacao/suco_de_uva', tags=["Exportação"])
+def exportacao_suco_de_uva():
+    s = Embrapa()
+    dados = s.exportacao_suco_de_uva()
+    return {"Exportação suco de uva": dados}
+
 
 
 
