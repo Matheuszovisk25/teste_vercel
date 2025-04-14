@@ -1,9 +1,16 @@
 from fastapi import FastAPI
 from embrapa import Embrapa
-
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # ou coloque o domínio do Streamlit
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/" , tags=["Rota_teste"])
 def read_root():
